@@ -28,3 +28,7 @@ src/Employee.Business/obj/
 src/Employee.Common/bin/Debug/net7.0/
 
 src/.vs/EmployeeApi/v17/
+
+*.db-wal
+
+*.db-shm
