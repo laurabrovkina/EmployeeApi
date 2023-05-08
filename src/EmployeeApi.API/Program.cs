@@ -2,6 +2,7 @@ using Employee.Business;
 using Employee.Common.Interfaces;
 using Employee.Common.Model;
 using Employee.Infrastructure;
+using EmployeeApi.API;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +31,8 @@ using (var scope = app.Services.CreateScope())
     var dbContex = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
     dbContex.Database.EnsureCreated();
 }
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseHttpsRedirection();
 
