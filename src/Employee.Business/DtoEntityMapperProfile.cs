@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
-using Employee.Common.Dtos;
+using Employee.Common.Dtos.Address;
+using Employee.Common.Dtos.Employee;
 using Employee.Common.Dtos.Job;
 using Employee.Common.Model;
 
@@ -18,5 +19,10 @@ public class DtoEntityMapperProfile : Profile
             .ForMember(dest => dest.Id, opt => opt.Ignore());
         CreateMap<JobUpdate, Job>();
         CreateMap<Job, JobGet>();
+
+        CreateMap<EmployeeCreate, Common.Model.Employee>()
+            .ForMember(dest => dest.Id, opt => opt.Ignore())
+            .ForMember(dest => dest.Teams, opt => opt.Ignore())
+            .ForMember(dest => dest.Job, opt => opt.Ignore());
     }
 }
