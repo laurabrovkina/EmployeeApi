@@ -1,4 +1,4 @@
-﻿using Employee.Common.Dtos;
+﻿using Employee.Common.Dtos.Address;
 using Employee.Common.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 

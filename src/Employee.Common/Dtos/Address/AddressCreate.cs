@@ -1,3 +1,3 @@
-﻿namespace Employee.Common.Dtos;
+﻿namespace Employee.Common.Dtos.Address;
 
 public record AddressCreate(string Street, string Zip, string City, string Email, string? Phone);
