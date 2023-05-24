@@ -1,3 +1,3 @@
-﻿namespace Employee.Common.Dtos.Address;
+﻿namespace EmployeeApi.Common.Dtos.Address;
 
 public record AddressDelete(int Id);

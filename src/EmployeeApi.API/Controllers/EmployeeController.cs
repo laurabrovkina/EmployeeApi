@@ -1,5 +1,5 @@
-﻿using Employee.Common.Dtos.Employee;
-using Employee.Common.Interfaces;
+﻿using EmployeeApi.Common.Dtos.Employee;
+using EmployeeApi.Common.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EmployeeApi.API.Controllers;
@@ -41,15 +41,15 @@ public class EmployeeController : ControllerBase
 
     [HttpGet]
     [Route("Get/{id}")]
-    public async Task<IActionResult> GetEmployee(int Id)
+    public async Task<IActionResult> GetEmployee(int id)
     {
-        var employee = await EmployeeService.GetEmployeeAsync(Id);
+        var employee = await EmployeeService.GetEmployeeAsync(id);
         return Ok(employee);
     }
 
     [HttpGet]
     [Route("Get")]
-    public async Task<IActionResult> GetEmployees(EmployeeFilter employeeFilter)
+    public async Task<IActionResult> GetEmployees([FromQuery]EmployeeFilter employeeFilter)
     {
         var employees = await EmployeeService.GetEmployeesAsync(employeeFilter);
         return Ok(employees);

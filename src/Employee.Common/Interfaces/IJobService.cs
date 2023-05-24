@@ -1,6 +1,6 @@
-﻿using Employee.Common.Dtos.Job;
+﻿using EmployeeApi.Common.Dtos.Job;
 
-namespace Employee.Common.Interfaces;
+namespace EmployeeApi.Common.Interfaces;
 
 public interface IJobService
 {

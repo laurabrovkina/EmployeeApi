@@ -1,3 +1,3 @@
-﻿namespace Employee.Common.Dtos.Job;
+﻿namespace EmployeeApi.Common.Dtos.Job;
 
 public record JobDelete(int Id);

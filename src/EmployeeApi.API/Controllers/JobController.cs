@@ -1,5 +1,5 @@
-﻿using Employee.Common.Dtos.Job;
-using Employee.Common.Interfaces;
+﻿using EmployeeApi.Common.Dtos.Job;
+using EmployeeApi.Common.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EmployeeApi.API.Controllers;

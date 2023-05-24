@@ -1,6 +1,6 @@
-﻿using Employee.Common.Dtos.Address;
+﻿using EmployeeApi.Common.Dtos.Address;
 
-namespace Employee.Common.Interfaces;
+namespace EmployeeApi.Common.Interfaces;
 
 public interface IAddressService
 {

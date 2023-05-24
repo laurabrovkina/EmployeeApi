@@ -36,3 +36,7 @@ src/.vs/EmployeeApi/v17/
 src/.vs/ProjectEvaluation/employeeapi.metadata.v6.1
 
 src/.vs/ProjectEvaluation/employeeapi.projects.v6.1
+
+*.db
+
+src/Employee.Business/bin/Debug/net7.0/

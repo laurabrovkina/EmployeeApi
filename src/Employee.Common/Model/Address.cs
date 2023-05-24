@@ -1,4 +1,4 @@
-﻿namespace Employee.Common.Model;
+﻿namespace EmployeeApi.Common.Model;
 
 public class Address : BaseEntity
 {

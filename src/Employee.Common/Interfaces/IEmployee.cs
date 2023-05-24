@@ -1,6 +1,6 @@
-﻿using Employee.Common.Dtos.Employee;
+﻿using EmployeeApi.Common.Dtos.Employee;
 
-namespace Employee.Common.Interfaces
+namespace EmployeeApi.Common.Interfaces
 {
     public interface IEmployeeService
     {

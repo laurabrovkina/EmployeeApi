@@ -1,5 +1,5 @@
-﻿using Employee.Common.Dtos.Address;
-using Employee.Common.Interfaces;
+﻿using EmployeeApi.Common.Dtos.Address;
+using EmployeeApi.Common.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EmployeeApi.API.Controllers;

@@ -5,11 +5,11 @@ VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeApi.API", "EmployeeApi.API\EmployeeApi.API.csproj", "{7FC3D680-CE69-4A00-8813-66A60404407F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employee.Business", "Employee.Business\Employee.Business.csproj", "{4856BF62-9A6F-4BAA-A1E3-8E96E1705CC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeApi.Business", "Employee.Business\EmployeeApi.Business.csproj", "{4856BF62-9A6F-4BAA-A1E3-8E96E1705CC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employee.Common", "Employee.Common\Employee.Common.csproj", "{069BBAE2-7387-4BBA-808D-251D88A6AAA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeApi.Common", "Employee.Common\EmployeeApi.Common.csproj", "{069BBAE2-7387-4BBA-808D-251D88A6AAA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employee.Infrastructure", "Employee.Infrastructure\Employee.Infrastructure.csproj", "{3F91A6DB-D059-48E2-8519-2F0E7B28FEB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeApi.Infrastructure", "Employee.Infrastructure\EmployeeApi.Infrastructure.csproj", "{3F91A6DB-D059-48E2-8519-2F0E7B28FEB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,9 +1,10 @@
 using AspNetCoreRateLimit;
-using Employee.Business;
-using Employee.Common.Interfaces;
-using Employee.Common.Model;
-using Employee.Infrastructure;
+using EmployeeApi.Business;
+using EmployeeApi.Common.Interfaces;
+using EmployeeApi.Common.Model;
+using EmployeeApi.Infrastructure;
 using EmployeeApi.API;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,7 @@ DIConfiguration.RegisterServices(builder.Services);
 builder.Services.AddDbContext<ApplicationDbContext>();
 builder.Services.AddScoped<IGenericRepository<Address>, GenericRepository<Address>>();
 builder.Services.AddScoped<IGenericRepository<Job>, GenericRepository<Job>>();
+builder.Services.AddScoped<IGenericRepository<Employee>, GenericRepository<Employee>>();
 
 builder.Services.AddControllers();
 

@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
-using Employee.Common.Dtos.Address;
-using Employee.Common.Dtos.Employee;
-using Employee.Common.Dtos.Job;
-using Employee.Common.Model;
+using EmployeeApi.Common.Dtos.Address;
+using EmployeeApi.Common.Dtos.Employee;
+using EmployeeApi.Common.Dtos.Job;
+using EmployeeApi.Common.Model;
 
-namespace Employee.Business;
+namespace EmployeeApi.Business;
 
 public class DtoEntityMapperProfile : Profile
 {
@@ -20,9 +20,21 @@ public class DtoEntityMapperProfile : Profile
         CreateMap<JobUpdate, Job>();
         CreateMap<Job, JobGet>();
 
-        CreateMap<EmployeeCreate, Common.Model.Employee>()
+        CreateMap<EmployeeCreate, Employee>()
             .ForMember(dest => dest.Id, opt => opt.Ignore())
             .ForMember(dest => dest.Teams, opt => opt.Ignore())
             .ForMember(dest => dest.Job, opt => opt.Ignore());
+
+        CreateMap<EmployeeUpdate, Employee>()
+            .ForMember(dest => dest.Teams, opt => opt.Ignore())
+            .ForMember(dest => dest.Job, opt => opt.Ignore());
+
+        CreateMap<Employee, EmployeeDetails>()
+            .ForMember(dest => dest.Id, opt => opt.Ignore())
+             //.ForMember(dest => dest.Teams, opt => opt.Ignore()) //todo: add teams
+            .ForMember(dest => dest.Job, opt => opt.Ignore())
+            .ForMember(dest => dest.Address, opt => opt.Ignore());
+
+        CreateMap<Employee, EmployeeList>();
     }
 }

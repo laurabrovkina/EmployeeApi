@@ -1,7 +1,7 @@
-﻿using Employee.Common.Model;
+using EmployeeApi.Common.Model;
 using System.Linq.Expressions;
 
-namespace Employee.Common.Interfaces;
+namespace EmployeeApi.Common.Interfaces;
 
 public interface IGenericRepository<T> where T : BaseEntity
 {

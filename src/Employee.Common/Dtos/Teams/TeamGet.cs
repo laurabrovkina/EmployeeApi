@@ -1,4 +1,4 @@
-﻿namespace Employee.Common.Dtos.Teams;
+﻿namespace EmployeeApi.Common.Dtos.Teams;
 
 public class TeamGet
 {

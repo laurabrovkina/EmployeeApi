@@ -1,9 +1,9 @@
-﻿using Employee.Common.Model;
+﻿using EmployeeApi.Common.Model;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Employee.Infrastructure
+namespace EmployeeApi.Infrastructure
 {
     public class ApplicationDbContext : IdentityDbContext<IdentityUser, IdentityRole, string>
     {

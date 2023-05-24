@@ -1,9 +1,9 @@
-﻿using Employee.Common.Interfaces;
-using Employee.Common.Model;
+﻿using EmployeeApi.Common.Interfaces;
+using EmployeeApi.Common.Model;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
-namespace Employee.Infrastructure;
+namespace EmployeeApi.Infrastructure;
 
 public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
 {

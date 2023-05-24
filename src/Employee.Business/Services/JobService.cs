@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using Employee.Common.Dtos.Job;
-using Employee.Common.Interfaces;
-using Employee.Common.Model;
+using EmployeeApi.Common.Dtos.Job;
+using EmployeeApi.Common.Interfaces;
+using EmployeeApi.Common.Model;
 
-namespace Employee.Business.Services;
+namespace EmployeeApi.Business.Services;
 
 public class JobService : IJobService
 {

@@ -1,8 +1,8 @@
-﻿using Employee.Business.Services;
-using Employee.Common.Interfaces;
+﻿using EmployeeApi.Business.Services;
+using EmployeeApi.Common.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Employee.Business;
+namespace EmployeeApi.Business;
 
 public class DIConfiguration
 {
@@ -11,5 +11,6 @@ public class DIConfiguration
         services.AddAutoMapper(typeof(DtoEntityMapperProfile));
         services.AddScoped<IAddressService, AddressService>();
         services.AddScoped<IJobService, JobService>();
+        services.AddScoped<IEmployeeService, EmployeeService>();
     }
 }
