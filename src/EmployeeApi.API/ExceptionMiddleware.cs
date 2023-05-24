@@ -21,11 +21,11 @@ public class ExceptionMiddleware
         catch (Exception ex)
         {
             context.Response.ContentType = "application/problem+json";
-            context.Response.StatusCode = StatusCodes.Status400BadRequest;
+            context.Response.StatusCode = StatusCodes.Status500InternalServerError;
 
             var problemDeatils = new ProblemDetails()
             {
-                Status = StatusCodes.Status400BadRequest,
+                Status = StatusCodes.Status500InternalServerError,
                 Detail = ex.Message,
                 Instance = "",
                 Title = "Unexpected Error - Something went wrong.",
