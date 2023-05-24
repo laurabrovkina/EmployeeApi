@@ -1,5 +1,5 @@
-﻿namespace EmployeeApi.Common.Dtos.Teams;
+﻿using EmployeeApi.Common.Dtos.Employee;
 
-public class TeamGet
-{
-}
+namespace EmployeeApi.Common.Dtos.Teams;
+
+public record TeamGet(int Id, string Name, List<EmployeeList> Employees);

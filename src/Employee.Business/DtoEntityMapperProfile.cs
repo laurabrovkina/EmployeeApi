@@ -2,6 +2,7 @@
 using EmployeeApi.Common.Dtos.Address;
 using EmployeeApi.Common.Dtos.Employee;
 using EmployeeApi.Common.Dtos.Job;
+using EmployeeApi.Common.Dtos.Teams;
 using EmployeeApi.Common.Model;
 
 namespace EmployeeApi.Business;
@@ -36,5 +37,14 @@ public class DtoEntityMapperProfile : Profile
             .ForMember(dest => dest.Address, opt => opt.Ignore());
 
         CreateMap<Employee, EmployeeList>();
+
+        CreateMap<TeamCreate, Team>()
+            .ForMember(dest => dest.Id, opt => opt.Ignore())
+            .ForMember(dest => dest.Employees, opt => opt.Ignore());
+
+        CreateMap<TeamUpdate, Team>()
+            .ForMember(dest => dest.Employees, opt => opt.Ignore());
+
+        CreateMap<Team, TeamGet>();
     }
 }
