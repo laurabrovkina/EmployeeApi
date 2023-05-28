@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
+using EmployeeApi.Business.Validation;
 using EmployeeApi.Common.Dtos.Address;
 using EmployeeApi.Common.Interfaces;
 using EmployeeApi.Common.Model;
+using FluentValidation;
 
 namespace EmployeeApi.Business.Services;
 
@@ -9,15 +11,24 @@ public class AddressService : IAddressService
 {
     private IMapper Mapper { get; }
     private IGenericRepository<Address> AddressRepository { get; }
+    private AddressCreateValidator AddressCreateValidator { get; }
+    private AddressUpdateValidator AddressUpdateValidator { get; }
 
-    public AddressService(IMapper mapper, IGenericRepository<Address> addressRepository)
+    public AddressService(IMapper mapper,
+        IGenericRepository<Address> addressRepository,
+        AddressCreateValidator addressCreateValidator,
+        AddressUpdateValidator addressUpdateValidator)
     {
         Mapper = mapper;
         AddressRepository = addressRepository;
+        AddressCreateValidator = addressCreateValidator;
+        AddressUpdateValidator = addressUpdateValidator;
     }
 
     public async Task<int> CreateAddressAsync(AddressCreate addressCreate)
     {
+        await AddressCreateValidator.ValidateAndThrowAsync(addressCreate);
+
         var entity = Mapper.Map<Address>(addressCreate);
         await AddressRepository.InsertAsync(entity);
         await AddressRepository.SaveChangesAsync();
@@ -45,6 +56,8 @@ public class AddressService : IAddressService
 
     public async Task UpdateAddressAsync(AddressUpdate addressUpdate)
     {
+        await AddressUpdateValidator.ValidateAndThrowAsync(addressUpdate);
+
         var entity = Mapper.Map<Address>(addressUpdate);
         AddressRepository.Update(entity);
         await AddressRepository.SaveChangesAsync();
